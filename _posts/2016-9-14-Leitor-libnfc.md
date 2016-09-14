@@ -20,9 +20,20 @@ Pra montar esse leitor, precisaremos de duas coisas:
 
 ### O Hardware
 
-A primeira coisa a se fazer é colocar o PN532 em modo HSU (High Speed Uart), colocando os switches na posição 0, e soldar os headers nos pinos: GND, VCC, TXD e RXD. Nesse caso eu fiz um shield usando uma placa de circuito ilhada.
+A primeira coisa a se fazer é colocar o PN532 em modo HSU (High Speed Uart), colocando os switches na posição 0.
+
+![switch]({{ site.baseurl }}/images/arduino/switch.jpg)
+
+
+ E soldar os headers nos pinos: GND, VCC, TXD e RXD. Nesse caso eu fiz um shield usando uma placa de circuito ilhada.
+
+![shield]({{ site.baseurl }}/images/arduino/shield.jpg)
+
 
 A segunda é preparar o arduino. E pra isso você vai precisar retirar o arduino do arduino ????? Com **CUIDADO** retire o chip do arduino e tenha cuidado pra não amassar os pinos.
+
+![retir]({{ site.baseurl }}/images/arduino/retir.jpg)
+
 
 - Ligue o TXD do PN532 ao TX do Arduino.
 - Ligue o RXD do PN532 ao RX do Arduino.
@@ -56,8 +67,12 @@ nfc-list uses libnfc 1.7.1
 
 NFC device: pn532_uart:/dev/ttyUSB0 opened
 ```
+![Imgur](http://i.imgur.com/musidFA.png)
+
 Se não, tente usar o terminal como root e `ls /dev/` pode te ajudar a descobrir onde está o seu leitor.
 
 Agora nós temos um leitor compatível com a libnfc por menos de R$ 90,00.
 
-Agora é só partir pra hackinagem ~~responsável~~ !
+![readr]({{ site.baseurl }}/images/arduino/readr.jpg)
+
+Agora é só partir pros ~~hackinagem~~ estudos !
