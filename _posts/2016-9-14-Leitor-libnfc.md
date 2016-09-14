@@ -46,14 +46,16 @@ Agora pra instalar os drivers do pn532 no computador vamos precisar de uma distr
 
 ```bash
 apt-get install autoconf libtool libusb-dev libpcsclite-dev build-essential
-git clone https://github.com/danfragoso/libnfc
-cd libnfc
+wget http://dl.bintray.com/nfc-tools/sources/libnfc-1.7.1.tar.bz2
+tar -jxvf libnfc-1.7.1.tar.bz2
+cd libnfc-1.7.1
 autoreconf -vis
 ./configure --with-drivers=pn532_uart --sysconfdir=/etc --prefix=/usr
 make clean all
 sudo make install
 sudo mkdir /etc/nfc
-sudo cp contrib/libnfc/pn532_uart2unousb.conf /etc/nfc/libnfc.conf
+wget https://raw.githubusercontent.com/danfragoso/libnfc/master/contrib/libnfc/pn532_uart2unousb.conf
+sudo cp pn532_uart2unousb.conf /etc/nfc/libnfc.conf
 ```
 Ligue o leitor ao computador.
 
