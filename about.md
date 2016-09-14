@@ -1,14 +1,14 @@
 ---
 layout: page
-title: About
+title: Sobre
 permalink: /about/
 ---
 
-Some information about you!
+Oi, meu nome é Danilo, moro e Salvador e estudo Ciência da Computação na UNIFACS.
 
-### More Information
+### sgfhdagdkjsa
 
-A place to include any other types of information that you'd like to include about yourself.
+samu
 
 ### Contato
 
