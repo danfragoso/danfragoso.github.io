@@ -13,7 +13,7 @@ Pra montar esse leitor, precisaremos de duas coisas:
 
 - PN532 (ElecHouse)
 
-![pn532]({{ site.baseurl }}/images/arduino/PN532-1.jpg)
+![pn532]({{ site.baseurl }}/images/arduino/pn532.jpg)
 
 
 *É fácil encontrar o PN532 no Mercado Livre por volta de R$ 55,00. Já o Arduino UNO, mais ainda.*
