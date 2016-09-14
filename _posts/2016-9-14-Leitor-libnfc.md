@@ -53,6 +53,7 @@ Se você fez tudo certo o output deve ser parecido com esse.
 
 ```bash
 nfc-list uses libnfc 1.7.1
+
 NFC device: pn532_uart:/dev/ttyUSB0 opened
 ```
 Se não, tente usar o terminal como root e `ls /dev/` pode te ajudar a descobrir onde está o seu leitor.
