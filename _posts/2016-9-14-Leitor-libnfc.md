@@ -5,7 +5,7 @@ title: Como fazer um leitor compatível com libnfc no precinho.
 
 Como fuçar na libnfc se o kit do Proxmark 3 custa $ 418,00 ? E os leitores do AliExpress custam com frete e impostos quase R$ 200,00 e só chegam depois de 3 meses ? A resposta é **ARDUINO !!!**
 
-Pra montar esse leitor, precisamos de duas coisas:
+Pra montar esse leitor, precisaremos de duas coisas:
 
  - Arduino UNO
 
@@ -31,7 +31,7 @@ Ligue o Arduino no cabo USB e pronto, Bob's your uncle !!!
 
 ### O Software
 
-Agora pra instalar os drivers do pn532 no computador vamos precisar de uma distro Linux. Kali Linux é bacana pois ele já vem com algumas ferramentas instaladas, como o Mifare Classic Offline Cracker (MFOC) e o MiFare Classic Universal toolKit (MFCUK). Mas em qualquer "ubuntão" funciona muito bem. Use os comandos abaixo pra instalar e configurar a libnfc no PN532 no Uno. ~~pfvr, desligue o arduino do pc antes rodar os comandos abaixo~~
+Agora pra instalar os drivers do pn532 no computador vamos precisar de uma distro Linux. Kali Linux é bacana pois ele já vem com algumas ferramentas instaladas, como o Mifare Classic Offline Cracker (MFOC) e o MiFare Classic Universal toolKit (MFCUK). Mas em qualquer "ubuntão" funciona muito bem. Use os comandos abaixo pra instalar e configurar a libnfc no PN532 no Uno. ~~pfvr, desligue o arduino do pc antes rodar os comandos abaixo.~~
 
 ```bash
 apt-get install autoconf libtool libusb-dev libpcsclite-dev build-essential
@@ -50,13 +50,13 @@ Ligue o leitor ao computador.
 sudo nfc-list
 ```
 Se você fez tudo certo o output deve ser parecido com esse.
-```bash
 
+```bash
 nfc-list uses libnfc 1.7.1
 NFC device: pn532_uart:/dev/ttyUSB0 opened
-
 ```
+Se não, tente usar o terminal como root e `ls /dev/` pode te ajudar a descobrir onde está o seu leitor.
 
+Agora nós temos um leitor compatível com a libnfc por menos de R$ 90,00.
 
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+Agora é só partir pra hackinagem ~~responsável~~ !
